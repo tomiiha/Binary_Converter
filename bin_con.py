@@ -4,7 +4,14 @@ bits_list = []
 bit_add = 1
 
 # User binary input.
-binary = input("Input binary up to " + str(bits) + " bits: ")
+while True:
+    try:
+        binary = input("Input binary up to " + str(bits) + " bits: ")
+        int(binary)
+        break
+    except ValueError:
+        print("Input only 1s and 0s.")
+        continue
 
 # Convert that to something we can measure in length.
 binary = str(binary)
@@ -15,6 +22,6 @@ if bits > count_bin or bits < count_bin:
     print("Please adjust binary to " + str(count_bin) + " bits")
 
 while bits > 0:
-        bits_list.append(bit_add)
-        bit_add = bit_add * 2
-        bits = bits - 1
+    bits_list.append(bit_add)
+    bit_add = bit_add * 2
+    bits = bits - 1
