@@ -25,16 +25,15 @@ while True:
 # Convert that to something we can measure in length.
 binary = str(binary)
 count_bin = len(binary)
-bits = count_bin
 
 if bit_input > count_bin or bit_input < count_bin:
-    print("Expected bits: " + str(bits) + ", input was " + str(count_bin))
+    print("Expected bits: " + str(count_bin) + ", input was " + str(count_bin))
     print("Please adjust binary to " + str(count_bin) + " bits")
 
-while bits > 0:
+while count_bin > 0:
     bits_list.append(bit_add)
     bit_add = bit_add * 2
-    bits = bits - 1
+    count_bin = count_bin - 1
 
 # Show bit numbers
 print(bits_list)
