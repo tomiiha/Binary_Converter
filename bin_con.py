@@ -24,7 +24,7 @@ while True:
         print("Input only 1s and 0s.")
         continue
 
-# Convert that to something we can measure in length.
+# Measure for checks.
 count_bin = len(str(binary))
 
 if bit_input > count_bin or bit_input < count_bin:
