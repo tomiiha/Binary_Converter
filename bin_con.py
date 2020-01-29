@@ -1,10 +1,10 @@
-# How many bits:
+# Bits and lists:
 bits_list = []
 binary_list = []
 result_list = []
 bit_add = 1
 
-# User bits input
+# User bits input.
 while True:
     try:
         bit_input = input("Input total bits: ")
