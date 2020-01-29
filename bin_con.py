@@ -1,9 +1,10 @@
-# How many bits.
+# How many bits:
 bits_list = []
 binary_list = []
+result_list = []
 bit_add = 1
 
-# User bits input.
+# User bits input
 while True:
     try:
         bit_input = input("Input total bits: ")
@@ -36,13 +37,17 @@ while count_bin > 0:
     bit_add = bit_add * 2
     count_bin = count_bin - 1
 
-# Sort binary into list.
+# Sort binary into list, and reverse bits to match.
 for var in str(binary):
-    binary_list.append(var)
-
-# Reverse to assign bit ordering.
+    binary_list.append(int(var))
 bits_list.reverse()
 
-# Show bit numbers
-print(bits_list)
-print(binary_list)
+# Calc number off of binary.
+pos_var = 0
+while pos_var < len(bits_list):
+    result_list.append(bits_list[pos_var] * binary_list[pos_var])
+    pos_var = pos_var + 1
+result = sum(result_list)
+    
+# Show result.
+print(result)
